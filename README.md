@@ -4,7 +4,11 @@ Clone the repo to a desired location in your computer.
 
 $ git clone https://github.com/Quielo/r6vc-app.git
 
-Then you will need to copy the "node_modules" folder into the cloned project.
+Then you will need to write:
+
+$ npm install
+
+To install the "node_modules" folder into the cloned project.
 after that tap:
 
 $ git status
