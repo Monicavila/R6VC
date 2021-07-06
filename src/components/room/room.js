@@ -49,6 +49,7 @@ function Room(props) {
   const inputRef = useRef(null);
   const [inputVisible, setInputVisible] = useState(false);
   const [roomName, setroomName] = useState('ROOM NAME');
+  const [userName, setUserName] = useState('')
 
   function logOut() {
     props.history.push("/back-soon");
@@ -176,7 +177,11 @@ function Room(props) {
             <br />
             <br />
             <br />
-            <input type="text" placeholder="Name" className={styles.inputNickname}></input>
+            <input type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            placeholder="Name"
+            className={styles.inputNickname}></input>
           </p>
           <button id="buttonOk" onClick={handleSecondModalClose} className={styles.okButton}>
             OK!
